@@ -1,0 +1,52 @@
+document.getElementById("backgroundrightweek1").addEventListener("click", togglehide1);
+document.getElementById("backgroundrightweek2").addEventListener("click", togglehide2);
+document.getElementById("backgroundrightweek3").addEventListener("click", togglehide3);
+let week1table=document.getElementById("week1table");
+let week2table=document.getElementById("week2table");
+let week3table=document.getElementById("week3table");
+let weekicon1=document.getElementById('icon1');
+let weekicon2=document.getElementById('icon2');
+let weekicon3=document.getElementById('icon3');
+function togglehide1(){
+    if (week1table.style.display!='none'){
+        week2table.style.display='none'
+        week1table.style.display='none';
+        week3table.style.display='none';
+        weekicon1.style.transform='rotate(0deg)';
+
+    }
+    else{
+        week1table.style.display='flex';
+        week3table.style.display='none';
+        week2table.style.display='none';
+        weekicon1.style.transform='rotate(180deg)';
+    }
+}
+function togglehide2(){
+    if (week2table.style.display!='none'){
+        week2table.style.display='none';
+        week1table.style.display='none';
+        week3table.style.display='none';
+        weekicon2.style.transform='rotate(0deg)';
+    }
+    else{
+        week2table.style.display='flex';
+        week1table.style.display='none';
+        week3table.style.display='none';
+        weekicon2.style.transform='rotate(180deg)';
+    }
+}
+function togglehide3(){
+    if (week3table.style.display!='none'){
+        week3table.style.display='none';
+        week1table.style.display='none';
+        week2table.style.display='none';
+        weekicon3.style.transform='rotate(0deg)';
+    }
+    else{
+        week3table.style.display='flex';
+        week1table.style.display='none';
+        week2table.style.display='none';
+        weekicon3.style.transform='rotate(180deg)';
+    }
+}
